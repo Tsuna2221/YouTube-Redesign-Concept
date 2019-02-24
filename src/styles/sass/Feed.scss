@@ -1,0 +1,58 @@
+@import "Mixins";
+@import "Variables";
+@import "Main";
+
+.feed{
+    margin-top: 56px;
+    margin-left: 310px;
+    width: 71%;
+    height: 900px;
+
+    &__settings{
+        @include displayAlign(ver);
+        justify-content: space-between;
+        height: 82px;
+
+        .format-flow{
+            display: flex;
+
+            .flow-option{
+                @include displayAlign(center);
+                @include size(66px, 40px);
+                border: 1px solid #E2E4E6;
+
+                &.active{
+                    @extend .bg-white, .sd-blue;
+                    border: 1px solid #fff;
+
+                    span{
+                        @extend .c-blue;
+                    }
+                }
+            }
+        }
+    }
+
+    &__container{
+        .video-item{
+            height: 137px;
+            display: flex;
+            transition: 0.4s ease;
+
+            &:hover{
+                @extend .sd-heavy;
+            }
+
+            img{
+                height: inherit;
+            }
+
+            .video-details{
+
+                .channel-views{
+                    @include displayAlign(ver)
+                }
+            }
+        }
+    }
+}

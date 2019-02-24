@@ -1,0 +1,66 @@
+@import "Mixins";
+@import "Variables";
+
+.header{
+    @include size(100%, 56px);
+    @include displayAlign(ver);
+    justify-content: space-between;
+
+    .main-header{
+        @include displayAlign(ver);
+        justify-content: space-between;
+        width: -webkit-fill-available;
+        margin: 0 26px;
+
+        &__yt-logo{height: 18px;}
+
+        &__search-form{
+            @include displayAlign(ver);
+
+            .search-input{
+                @include size(60vw, 38px);
+                @include no-borderline;
+                padding-left: 37px;
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+                background: url('./assets/search.svg') no-repeat 12px;
+
+                &::placeholder{
+                    color: #DBDBDB;
+                    font-style: italic;
+                }
+            }
+
+            .search-btn{
+                @include size(45px, 40px);
+                cursor: pointer;
+                justify-content: center;
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+                background-color: #fff;
+            }
+        }
+
+        &__account{
+            @include displayAlign(ver);
+
+            .account-name{
+                margin: 0 15px;
+            }
+
+            .account-icon{
+                @include size(30px, 30px);
+                background-color: #95989A;
+                border-radius: 50px;
+            }
+        }
+    }
+
+    .head-btn{
+        min-width: 56px;
+        height: 56px;
+        border: 1px solid $light-border-color;
+        justify-content: center;
+        cursor: pointer;
+    }
+}

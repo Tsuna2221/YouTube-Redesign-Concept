@@ -1,0 +1,47 @@
+@import "Mixins";
+@import "Variables";
+@import "Main";
+
+.sidebar{
+    @include size(230px, -webkit-fill-available);
+    margin-top: 56px;
+    
+    .navigation{
+        .sidebar-item{
+            @include size(100%, 46px);
+            @include displayAlign(ver);
+            cursor: pointer;  
+            transition: .3s ease;
+
+            &.active{
+                span{color: $yt-red;}
+            }
+    
+            &:hover{
+                @extend .sd-div;
+                background-color: #f9f9f9;
+
+                span{
+                    color: $yt-red; 
+                }
+            }
+        }
+
+        .subscription-container{
+            overflow-y: scroll;
+            height: 53vh;
+
+            &::-webkit-scrollbar {
+                @include size(6px, 3px);
+            }
+            
+            &::-webkit-scrollbar-thumb {
+                background: rgb(197, 197, 197); 
+            }
+            
+            &::-webkit-scrollbar-thumb:hover {
+                background: rgb(167, 167, 167); 
+            }
+        }
+    }
+}

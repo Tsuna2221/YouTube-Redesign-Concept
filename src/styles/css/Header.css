@@ -1,0 +1,53 @@
+.header {
+  width: 100%;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .header .main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: -webkit-fill-available;
+    margin: 0 26px; }
+    .header .main-header__yt-logo {
+      height: 18px; }
+    .header .main-header__search-form {
+      display: flex;
+      align-items: center; }
+      .header .main-header__search-form .search-input {
+        width: 60vw;
+        height: 38px;
+        border: none;
+        outline: none;
+        padding-left: 37px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        background: url("./assets/search.svg") no-repeat 12px; }
+        .header .main-header__search-form .search-input::placeholder {
+          color: #DBDBDB;
+          font-style: italic; }
+      .header .main-header__search-form .search-btn {
+        width: 45px;
+        height: 40px;
+        cursor: pointer;
+        justify-content: center;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        background-color: #fff; }
+    .header .main-header__account {
+      display: flex;
+      align-items: center; }
+      .header .main-header__account .account-name {
+        margin: 0 15px; }
+      .header .main-header__account .account-icon {
+        width: 30px;
+        height: 30px;
+        background-color: #95989A;
+        border-radius: 50px; }
+  .header .head-btn {
+    min-width: 56px;
+    height: 56px;
+    border: 1px solid #EEEEEE;
+    justify-content: center;
+    cursor: pointer; }
