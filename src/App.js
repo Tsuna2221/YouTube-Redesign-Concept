@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios'
 
 //Components
 import Header from './components/Header'
@@ -18,5 +19,7 @@ class App extends Component {
 		);
 	}
 }
+
+
 
 export default App;

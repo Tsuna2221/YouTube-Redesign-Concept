@@ -23,7 +23,7 @@ class Feed extends Component {
 
     componentDidMount = () => {
         var urlQuery = window.location.search === '' ? null : JSON.parse('{"'+ window.location.search.substring(1).replace(/&/g, '","').replace(/=/g, '":"') +'"}')
-        var apiKey = 'AIzaSyC_Irupn3NpxFrGkxymqSJ63LTy4OAhSug'
+        var apiKey = '<API Key>'
         var requestType = ['id', 'snippet', 'brandingSettings', 'contentDetails', 'invideoPromotion', 'statistics', 'topicDetails']
         var channelID = urlQuery === null ? 'UCK8sQmJBp8GCxrOtXWBpyEA' : urlQuery.channel
         var requestURL = `https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${channelID}&part=${requestType[0]},${requestType[1]}&order=date&maxResults=50`
